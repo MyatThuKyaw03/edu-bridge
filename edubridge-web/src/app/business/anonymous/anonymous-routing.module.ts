@@ -21,6 +21,7 @@ const routes: Routes = [
   {path: 'courselist',component: CourselistComponent},
   {path: 'teacherdetails',component: TeacherdetailsComponent},
   {path: '',pathMatch:'full' ,redirectTo:'/home'}
+
 ];
 
 @NgModule({

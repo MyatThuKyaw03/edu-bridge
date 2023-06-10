@@ -8,6 +8,7 @@ import { SigninComponent } from './signin/signin.component';
 import { TeachersignupComponent } from './signup/teachersignup/teachersignup.component';
 import { StudentsignupComponent } from './signup/studentsignup/studentsignup.component';
 import { PagesModule } from 'src/app/commons/pages/pages.module';
+import { StudentModule } from '../student/student.module';
 
 
 
@@ -22,7 +23,8 @@ import { PagesModule } from 'src/app/commons/pages/pages.module';
   imports: [
     CommonModule,
     AnonymousRoutingModule,
-    PagesModule
+    PagesModule,
+    StudentModule
   ]
 })
 export class AnonymousModule { }
