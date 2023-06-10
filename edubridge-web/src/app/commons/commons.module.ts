@@ -4,8 +4,11 @@ import { CommonModule } from '@angular/common';
 import { CommonsRoutingModule } from './commons-routing.module';
 
 
+
 @NgModule({
-  declarations: [],
+  declarations: [
+
+  ],
   imports: [
     CommonModule,
     CommonsRoutingModule
