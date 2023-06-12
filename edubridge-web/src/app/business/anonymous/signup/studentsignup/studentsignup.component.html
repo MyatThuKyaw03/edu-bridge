@@ -1,1 +1,27 @@
-<p>studentsignup works!</p>
+<h3><i class="fa-solid fa-user"></i>Sign Up as a Student</h3>
+
+<div class="row mt-3">
+  <div class="col">
+    <img class="w-100 img-thumbnail" src="/assets/images/signin-cover.jpg" alt="Student Cover">
+  </div>
+  <div class="col-4">
+    <form [formGroup]="form">
+      <app-form-group [valid]="form.get('name')!.valid" label="Name">
+        <input formControlName="name" type="name" class="form-control" placeholder="Enter your Name">
+      </app-form-group>
+
+      <app-form-group [valid]="form.get('email')!.valid" label="Email Address">
+        <input formControlName="email" type="email" class="form-control" placeholder="Enter your email">
+      </app-form-group>
+
+      <app-form-group [valid]="form.get('password')!.valid" label="Password" >
+        <input formControlName="password" type="password" placeholder="Enter Password" class="form-control">
+      </app-form-group>
+
+      <button type="submit" (click)="signUp()" class="btn btn-outline-success">
+        <i class="bi bi-unlock"></i> Sign Up
+      </button>
+    </form>
+
+  </div>
+</div>

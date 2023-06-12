@@ -1,0 +1,18 @@
+<div class="card mb-3">
+  <div class="card-item">
+    <h5 class="card-title text-center">{{course.name}}</h5>
+    <img class="img-fluid w-100 card-img-top" [src]="course.image || '/assets/images/course-cover.jpg'" alt="">
+    <p class="card-text">Ko Thar aye</p>
+
+    <div class="d-flex justify-content-between">
+      <small class="card-text">$234</small>
+      <!-- <small class="card-text"></small> -->
+    </div>
+    <button class="btn btn-primary" (click)="showDetails()">
+      <i class="bi bi-send"></i> Purchase
+    </button>
+    <button class="btn btn-outline-primary"  (click)="showDetails()">
+      <i class="bi bi-send"></i> Show Details
+    </button>
+  </div>
+</div>
