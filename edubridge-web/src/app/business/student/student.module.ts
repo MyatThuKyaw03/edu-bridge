@@ -10,13 +10,14 @@ import { PagesModule } from 'src/app/commons/pages/pages.module';
 import { StudenthomeComponent } from './studenthome/studenthome.component';
 
 
+
 @NgModule({
   declarations: [
     StudentComponent,
     PurchasedcoursesComponent,
     StudentprofileComponent,
     LearningpageComponent,
-    StudenthomeComponent
+    StudenthomeComponent,
   ],
   imports: [
     CommonModule,

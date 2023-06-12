@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-categorylist',
@@ -6,6 +7,7 @@ import { Component } from '@angular/core';
   styles: [
   ]
 })
-export class CategorylistComponent {
+export class CategorylistComponent{
+
 
 }

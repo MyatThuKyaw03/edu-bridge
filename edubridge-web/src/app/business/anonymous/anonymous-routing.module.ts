@@ -4,13 +4,15 @@ import { CategorylistComponent } from 'src/app/commons/pages/categorylist/catego
 import { CoursedetailsComponent } from 'src/app/commons/pages/coursedetails/coursedetails.component';
 import { CourselistComponent } from 'src/app/commons/pages/courselist/courselist.component';
 import { TeacherdetailsComponent } from 'src/app/commons/pages/teacherdetails/teacherdetails.component';
+import { AnonymousComponent } from './anonymous.component';
 import { HomeComponent } from './home/home.component';
 import { SigninComponent } from './signin/signin.component';
 import { StudentsignupComponent } from './signup/studentsignup/studentsignup.component';
 import { TeachersignupComponent } from './signup/teachersignup/teachersignup.component';
 
 const routes: Routes = [
-  {path: 'home' , component: HomeComponent},
+  {path: '',component: AnonymousComponent, children: [
+    {path: 'home' , component: HomeComponent},
   {path: 'signin', component: SigninComponent},
   {path: 'signup',children:[
     {path :'studentsignup',component: StudentsignupComponent },
@@ -21,6 +23,8 @@ const routes: Routes = [
   {path: 'courselist',component: CourselistComponent},
   {path: 'teacherdetails',component: TeacherdetailsComponent},
   {path: '',pathMatch:'full' ,redirectTo:'/home'}
+
+  ]}
 
 ];
 

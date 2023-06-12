@@ -5,6 +5,7 @@ import { CommonsRoutingModule } from './commons-routing.module';
 
 
 
+
 @NgModule({
   declarations: [
 
@@ -12,6 +13,11 @@ import { CommonsRoutingModule } from './commons-routing.module';
   imports: [
     CommonModule,
     CommonsRoutingModule
+  ],
+  exports: [
+
   ]
 })
-export class CommonsModule { }
+export class CommonsModule {
+
+}
