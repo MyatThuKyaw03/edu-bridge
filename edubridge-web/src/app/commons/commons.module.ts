@@ -6,15 +6,19 @@ import { FormGroupComponent } from './widgets/form-group/form-group.component';
 
 
 
+
 @NgModule({
   declarations: [
 
   ],
   imports: [
     CommonModule,
-    CommonsRoutingModule,
-    FormGroupComponent
+    CommonsRoutingModule
+  ],
+  exports: [
 
   ]
 })
-export class CommonsModule { }
+export class CommonsModule {
+
+}

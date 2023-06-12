@@ -1,2 +1,84 @@
-<p>teacher works!</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-info">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/teacher"><i class="bi bi-person-gear"></i> Teacher Dashboard</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav  mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active"  [routerLink]="'/teacher'">Home</a>
+        </li>
+      </ul>
+      <div class="nav-item dropdown ms-auto">
+      <a class="nav-link dropdown-toggle ms-auto" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        More Options
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <li><a class="dropdown-item" routerLink="/teacher/teacherprofile">Your Profile</a></li>
+        <li><a class="dropdown-item" [routerLink]="['/anonymous', 'home']">Logout</a></li>
+        </ul>
+    </div>
+
+    </div>
+  </div>
+</nav>
+
+<div class="container my-4">
+  <div class="row">
+<div class="col-4">
+  <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" routerLink="/teacher">Create New Course</button>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="form">
+        <div class="form-group">
+        <label for="title">Course's Title</label>
+        <input formControlName="courseTitle" type="text" class="form-control" placeholder="Place Your Course's Title" id="title">
+      </div>
+      <div class="form-group mt-2">
+        <label for="Course Field">Select Category</label>
+        <select formControlName="category" class="form-control" name="Course Field" id="course">
+          <option value="Java Basic Course">Java Basic Course</option>
+          <option value="One Stop Weekday">One Stop Weekday</option>
+          <option value="One Stop Weekend">One Stop Weekend</option>
+        </select>
+      </div>
+      <div class="form-group mt-2">
+        <label for="price">Price</label>
+        <input formControlName="price" type="number" id="price" placeholder="Set Your Course Fee" class="form-control">
+      </div>
+      <div class="form-group mt-2">
+        <label for="desc">Description</label>
+        <textarea formControlName="descricption" name="" id="desc" cols="30" rows="5" placeholder="Description" class="form-control"></textarea>
+      </div>
+      </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="submit(form.value)">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="col-4">
+  <button class="btn btn-success" routerLink="/teacher/teachercourselist">Check Own Courses</button>
+</div>
+<div class="col-4">
+  <button class="btn btn-warning" routerLink="/teacher/courselist">Check Other Courses</button>
+</div>
+  </div>
+
+
+<div class="container">
 <router-outlet></router-outlet>
+</div>

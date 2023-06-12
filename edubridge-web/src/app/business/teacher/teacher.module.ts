@@ -8,6 +8,9 @@ import { TeachercourselistComponent } from './teachercourselist/teachercourselis
 import { TeacherprofileComponent } from './teacherprofile/teacherprofile.component';
 import { CoursemoduleComponent } from './coursemodule/coursemodule.component';
 import { PagesModule } from 'src/app/commons/pages/pages.module';
+import { AnonymousComponent } from '../anonymous/anonymous.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -17,11 +20,13 @@ import { PagesModule } from 'src/app/commons/pages/pages.module';
     TeachercourselistComponent,
     TeacherprofileComponent,
     CoursemoduleComponent
-  ],
+    ],
   imports: [
     CommonModule,
     TeacherRoutingModule,
-    PagesModule
-  ]
+    PagesModule,
+    ReactiveFormsModule
+  ],
+
 })
 export class TeacherModule { }

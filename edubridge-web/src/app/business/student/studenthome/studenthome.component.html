@@ -1,1 +1,20 @@
-<p>studenthome works!</p>
+<h3 class="text-primary my-3 text-center">Your Own Courses</h3>
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-4" *ngFor="let course of courseList">
+        <div class="card mb-2" routerLink="/student/learningpage">
+          <img src="{{course.bg}}" class="card-image-bottom" alt="">
+
+          <div class="card-body">
+            <h3 class="card-title text-center">{{course.title}}</h3>
+          </div>
+          <div class="card-footer">
+            <div class="d-flex justify-content-between">
+            <a routerLink="/student/coursedetails">Details</a>
+            <a routerLink="/student/learningpage">Learn</a>
+          </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
