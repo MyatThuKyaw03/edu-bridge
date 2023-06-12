@@ -1,1 +1,29 @@
-<p>adminteacherdetails works!</p>
+<div class="container mt-3">
+  <div class="card">
+    <div class="card-header text-center">Teacher Details</div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-6">
+          <img
+            class="img-fluid"
+            src="https://cdn.elearningindustry.com/wp-content/uploads/2019/10/professional-development-tools-for-teachers.jpg"
+            alt=""
+          />
+        </div>
+        <div class="col-6 mt-3">
+          Name <br />
+          Email <br />
+          Ph Num <br />
+          Bank Acc <br />
+          Created Courses <br />
+          Created Courses date <br />
+        </div>
+      </div>
+      <div class="row mt-3">
+        <button [routerLink]="['/admin/teacherlist']" class="btn btn-info">
+          <i class="bi bi-arrow-left-square-fill"></i> Back
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

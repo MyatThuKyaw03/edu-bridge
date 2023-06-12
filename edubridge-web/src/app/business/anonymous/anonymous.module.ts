@@ -10,21 +10,14 @@ import { StudentsignupComponent } from './signup/studentsignup/studentsignup.com
 import { PagesModule } from 'src/app/commons/pages/pages.module';
 import { StudentModule } from '../student/student.module';
 
-
-
 @NgModule({
   declarations: [
     AnonymousComponent,
     HomeComponent,
     SigninComponent,
     TeachersignupComponent,
-    StudentsignupComponent
+    StudentsignupComponent,
   ],
-  imports: [
-    CommonModule,
-    AnonymousRoutingModule,
-    PagesModule,
-    StudentModule
-  ]
+  imports: [CommonModule, AnonymousRoutingModule, PagesModule, StudentModule],
 })
-export class AnonymousModule { }
+export class AnonymousModule {}

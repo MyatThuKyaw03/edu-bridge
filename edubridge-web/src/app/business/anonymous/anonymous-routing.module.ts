@@ -10,22 +10,24 @@ import { StudentsignupComponent } from './signup/studentsignup/studentsignup.com
 import { TeachersignupComponent } from './signup/teachersignup/teachersignup.component';
 
 const routes: Routes = [
-  {path: 'home' , component: HomeComponent},
-  {path: 'signin', component: SigninComponent},
-  {path: 'signup',children:[
-    {path :'studentsignup',component: StudentsignupComponent },
-    {path : 'teachersignup',component: TeachersignupComponent}
-  ]},
-  {path: 'categorylist',component: CategorylistComponent},
-  {path: 'coursedetails',component: CoursedetailsComponent},
-  {path: 'courselist',component: CourselistComponent},
-  {path: 'teacherdetails',component: TeacherdetailsComponent},
-  {path: '',pathMatch:'full' ,redirectTo:'/home'}
-
+  { path: 'home', component: HomeComponent },
+  { path: 'signin', component: SigninComponent },
+  {
+    path: 'signup',
+    children: [
+      { path: 'studentsignup', component: StudentsignupComponent },
+      { path: 'teachersignup', component: TeachersignupComponent },
+    ],
+  },
+  { path: 'categorylist', component: CategorylistComponent },
+  { path: 'coursedetails', component: CoursedetailsComponent },
+  { path: 'courselist', component: CourselistComponent },
+  { path: 'teacherdetails', component: TeacherdetailsComponent },
+  { path: '', pathMatch: 'full', redirectTo: '/home' },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AnonymousRoutingModule { }
+export class AnonymousRoutingModule {}
