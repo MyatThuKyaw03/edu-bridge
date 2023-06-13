@@ -1,1 +1,47 @@
-<p>teachersignup works!</p>
+
+
+
+  <div class="container rounded-1 mt-4 my-5" style="max-width: 500px;">
+    <div class="card">
+      <div class="card-header">
+        <h5 class="text-center"><i class="bi bi-pen"></i> Sign Up as a Teacher</h5>
+      </div>
+      <div class="card-body">
+
+        <form [formGroup]="form" class="px-4 pt-3">
+          <app-form-group [valid]="form.get('name')!.valid" label="Name">
+            <input formControlName="name" type="name" class="form-control" placeholder="Enter your Name">
+          </app-form-group>
+
+         <div>
+          <div class="row">
+            <div class="col-md-6">
+              <app-form-group [valid]="form.get('email')!.valid" label="Email Address">
+                <input formControlName="email" type="email" class="form-control" placeholder="Enter your email">
+              </app-form-group>
+            </div>
+            <div class="col-md-6">
+              <app-form-group [valid]="form.get('password')!.valid" label="Password" >
+                <input formControlName="password" type="password" placeholder="Enter Password" class="form-control">
+              </app-form-group>
+            </div>
+          </div>
+         </div>
+
+          <app-form-group [valid]="form.get('bankaccount')!.valid" label="bankaccount" >
+            <input formControlName ="bankaccount" type="bankaccount" placeholder="Enter Your BankAccount" class="form-control">
+          </app-form-group>
+
+          <div class="mb-4">
+            <label class="form-label">Enter Your Educational background</label>
+            <textarea cols="auto" rows="3" class="form-control"></textarea>
+          </div>
+
+          <button type="submit" (click)="teacherSignUp()" class="btn btn-sm btn-outline-success mx-auto">
+            <i class="bi bi-unlock"></i> Sign Up
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+

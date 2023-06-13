@@ -1,12 +1,10 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { FormGroup,FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder } from '@angular/forms';
 import { CourseService } from 'src/app/services/apis/course.service';
-
-
 
 @Component({
   selector: 'app-teacher',
-  templateUrl: './teacher.component.html'
+  templateUrl: './teacher.component.html',
 })
 export class TeacherComponent {
 
@@ -23,7 +21,7 @@ export class TeacherComponent {
     })
   }
 
-  submit(value : any){
+  submit(value: any) {
     this.courseService.save(value);
   }
 }

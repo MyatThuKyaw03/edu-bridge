@@ -20,7 +20,8 @@ export class TeachercourselistComponent implements OnInit{
 
     this.moduleForm = builder.group({
       subtitle: '',
-      name: ''
+      name: '',
+      file: ''
     })
     // console.log(this.moduleForm.value) //object
 
