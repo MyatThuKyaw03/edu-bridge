@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-info">
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
   <div class="container-fluid">
     <a class="navbar-brand" routerLink="/teacher"><i class="bi bi-person-gear"></i> Teacher Dashboard</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,12 +35,18 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Add New Course</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <form [formGroup]="form">
-        <div class="form-group">
+
+          <div class="form-group">
+            <label for="id">Id</label>
+            <input type="number" formControlName="id" class="form-control" placeholder="Id" id="id">
+          </div>
+
+        <div class="form-group mt-2">
         <label for="title">Course's Title</label>
         <input formControlName="courseTitle" type="text" class="form-control" placeholder="Place Your Course's Title" id="title">
       </div>
@@ -60,11 +66,17 @@
         <label for="desc">Description</label>
         <textarea formControlName="descricption" name="" id="desc" cols="30" rows="5" placeholder="Description" class="form-control"></textarea>
       </div>
+
+      <div class="form-group mt-2">
+        <label for="img">ImageUrl</label>
+        <input type="text" formControlName="imageUrl" id="img" placeholder="Image Url" class="form-control">
+      </div>
+
       </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" (click)="submit(form.value)">Save</button>
+        <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" (click)="submit(form.value)">Save</button>
       </div>
     </div>
   </div>

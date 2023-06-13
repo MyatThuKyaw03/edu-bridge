@@ -1,0 +1,59 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-4"  *ngFor="let course of courses" >
+      <div class="card mb-2">
+        <img src="{{course.imageUrl}}" class="card-image-bottom w-100" alt="">
+
+        <div class="card-body">
+          <h3 class="card-title text-center">{{course.courseTitle}}</h3>
+        </div>
+        <div class="card-footer">
+          <div class="d-flex justify-content-between">
+          <a class="btn btn-outline-primary" routerLink="/teacher/coursemodule">Check</a>
+          <a class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#courseModal">Add Module</a>
+
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="courseModal" tabindex="-1" aria-labelledby="la" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="la">Add Module</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="moduleForm">
+          <div class="form-group mb-2">
+            <label for="title">
+              Module Subtitle
+            </label>
+            <input formControlName="subtitle" type="text" class="form-control" id="title" placeholder="Module Subtitle" >
+          </div>
+          <div class="form-group mb-2">
+            <label for="name">
+              Module Name
+            </label>
+            <input formControlName="name" type="text" class="form-control" id="name" placeholder="Module Name" >
+          </div>
+          <!-- <div class="form-group mb-2">
+            <label for="file">
+              Course File
+            </label>
+            <input formControlName="fileName" type="file" class="form-control file-upload" id="file" placeholder="Upload Your File" >
+          </div> -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal"
+            (click)="add()">Upload</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -8,10 +8,12 @@ import { CourseService } from 'src/app/services/apis/course.service';
   ]
 })
 export class CourselistComponent implements OnInit{
-  courses:any=[]
+  courses:any=[
+  ]
 
   constructor(private courseService: CourseService){}
   ngOnInit(): void {
     this.courses = this.courseService.findAll();
+    console.log(this.courses)
   }
 }

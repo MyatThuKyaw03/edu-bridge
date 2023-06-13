@@ -9,21 +9,21 @@ import { CourseService } from 'src/app/services/apis/course.service';
   templateUrl: './teacher.component.html'
 })
 export class TeacherComponent {
-  @Output()
-  emitter = new EventEmitter<any>();
+
   form:FormGroup
 
   constructor(builder: FormBuilder,private courseService : CourseService){
     this.form=builder.group({
+      id: '',
       courseTitle: '',
       category: '',
       price: '',
-      descricption: ''
+      descricption: '',
+      imageUrl: ''
     })
   }
 
   submit(value : any){
     this.courseService.save(value);
-    console.log(value);
   }
 }
