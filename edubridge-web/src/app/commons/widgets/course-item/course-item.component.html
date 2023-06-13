@@ -1,0 +1,17 @@
+<div class="card mb-3">
+  <div class="card-item">
+    <h5 class="card-title text-center">{{course.name}}</h5>
+    <img class="img-fluid w-100 card-img-top" [src]="course.image || '/assets/images/course-cover.jpg'" alt="">
+    <p class="card- title text-center">Chat Kyi</p>
+
+    <div class="d-flex justify-content-between">
+      <small class="card-text">$234</small>
+      <!-- <small class="card-text"></small> -->
+      <button class="btn btn-primary" (click)="showDetails()">
+        <i class="bi bi-send"></i> Purchase
+      </button>
+    </div>
+
+    <!-- <a [href]="showDetails()" >details</a> -->
+  </div>
+</div>

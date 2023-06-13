@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { SecurityService } from 'src/app/services/security/security.service';
 
 @Component({
   selector: 'app-signin',
@@ -7,5 +9,29 @@ import { FormGroup } from '@angular/forms';
   styles: [],
 })
 export class SigninComponent {
-  signIn() {}
+  form: FormGroup;
+
+  constructor(
+    builder: FormBuilder,
+    private security: SecurityService,
+    private router: Router
+  ) {
+    this.form = builder.group({
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.min(4)]],
+    });
+  }
+
+  signIn() {
+    if (this.form.valid) {
+      this.security.signIn(this.form.value).subscribe((result) => {
+        if (result) {
+          this.router.navigate([
+            '/studenthome',
+            result.role.toLocaleLowerCase(),
+          ]);
+        }
+      });
+    }
+  }
 }

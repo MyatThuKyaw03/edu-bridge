@@ -9,6 +9,8 @@ import { TeachersignupComponent } from './signup/teachersignup/teachersignup.com
 import { StudentsignupComponent } from './signup/studentsignup/studentsignup.component';
 import { PagesModule } from 'src/app/commons/pages/pages.module';
 import { StudentModule } from '../student/student.module';
+import { WidgetsModule } from '../../commons/widgets/widgets.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,13 @@ import { StudentModule } from '../student/student.module';
     TeachersignupComponent,
     StudentsignupComponent,
   ],
-  imports: [CommonModule, AnonymousRoutingModule, PagesModule, StudentModule],
+  imports: [
+    CommonModule,
+    AnonymousRoutingModule,
+    PagesModule,
+    StudentModule,
+    WidgetsModule,
+    ReactiveFormsModule,
+  ],
 })
 export class AnonymousModule {}
