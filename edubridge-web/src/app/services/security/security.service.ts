@@ -11,7 +11,9 @@ export class SecurityService {
   constructor(private api:SecurityApi) {}
 
   signIn(form:any) {
-    return of(this._users.filter(user => user.email == form.email && user.password == form.password))
+    return of(this._users.filter(user => user.email == form.email && user.password == form.password),
+    (this._teacher.filter(teacher=> teacher.email==form.email && teacher.password==form.password)))
+
   }
 
 
