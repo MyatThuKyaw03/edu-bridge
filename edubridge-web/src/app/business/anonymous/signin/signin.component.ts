@@ -26,11 +26,17 @@ export class SigninComponent {
 
   signIn() {
     if(this.form.valid) {
-      this.security.signIn(this.form.value).subscribe(result => {
-        if(result) {
-          this.router.navigate(['/studenthome', result.role.toLocaleLowerCase() ])
+      // this.security.signIn(this.form.value).subscribe(result => {
+      //   if(result) {
+      //     this.router.navigate(['/studenthome', result.role.toLocaleLowerCase() ])
+      //   }
+     //  })
+     this.security.signIn(this.form.value).subscribe(arr => {
+        if(arr.length) {
+          if(arr[0])
+            this.router.navigate(['/teacher', 'courselist'])
         }
-      })
+     })
     }
   }
 

@@ -23,9 +23,7 @@ export class StudentsignupComponent {
 
   signUp(){
     if(this.form.valid) {
-      this.security.signUp(this.form.value).subscribe(
-        result => this.router.navigate(['/anonymous', 'signin'])
-      )
+      this.security.signUp(this.form.value).subscribe(result => this.router.navigate(['/anonymous', 'signin']))
     }
 
   }

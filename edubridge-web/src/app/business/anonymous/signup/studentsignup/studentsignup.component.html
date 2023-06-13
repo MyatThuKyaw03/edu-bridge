@@ -1,25 +1,30 @@
 
 
-<div class="row mt-3">
-  <h3 class="text-center"><i class="bi bi-person"></i>Sign Up as a Student</h3>
-  <div class="container col-4 bg-secondary-subtle  rounded-1 ">
-    <form [formGroup]="form" class="px-4 pt-3">
-      <app-form-group [valid]="form.get('name')!.valid" label="Name">
-        <input formControlName="name" type="name" class="form-control" placeholder="Enter your Name">
-      </app-form-group>
+  <div class="container rounded-1 mt-4" style="max-width: 500px;">
+    <div class="card">
+      <div class="card-header">
+        <h5 class="text-center"><i class="bi bi-person"></i> Sign Up as a Student</h5>
+      </div>
+      <div class="card-body">
+        <form [formGroup]="form" class="px-4 pt-3">
+          <app-form-group [valid]="form.get('name')!.valid" label="Name">
+            <input formControlName="name" type="name" class="form-control" placeholder="Enter your Name">
+          </app-form-group>
 
-      <app-form-group [valid]="form.get('email')!.valid" label="Email Address">
-        <input formControlName="email" type="email" class="form-control" placeholder="Enter your email">
-      </app-form-group>
+          <app-form-group [valid]="form.get('email')!.valid" label="Email Address">
+            <input formControlName="email" type="email" class="form-control" placeholder="Enter your email">
+          </app-form-group>
 
-      <app-form-group [valid]="form.get('password')!.valid" label="Password" >
-        <input formControlName="password" type="password" placeholder="Enter Password" class="form-control">
-      </app-form-group>
+          <app-form-group [valid]="form.get('password')!.valid" label="Password" >
+            <input formControlName="password" type="password" placeholder="Enter Password" class="form-control">
+          </app-form-group>
 
-      <button type="submit" (click)="signUp()" class="btn btn-outline-success mb-3">
-        <i class="bi bi-unlock"></i> Sign Up
-      </button>
-    </form>
+          <button type="submit" (click)="signUp()" class="btn btn-sm btn-outline-success mb-3">
+            <i class="bi bi-unlock"></i> Sign Up
+          </button>
+        </form>
+      </div>
+    </div>
+
 
   </div>
-</div>

@@ -9,9 +9,9 @@ export class SecurityApi {
 
   signIn(form:any):Observable<LoginUser> {
     return of({
-      name: form.password,
+      name: form.name,
       email: form.email,
-      role: form.password
+      password: form.password
     })
   }
 

@@ -21,7 +21,8 @@ export class TeachersignupComponent {
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.min(4)]],
       bankaccount:['',Validators.required],
-      
+      edubackground :['']
+
        })
   }
 
@@ -30,6 +31,7 @@ export class TeachersignupComponent {
       this.security.teacherSignUp(this.form.value).subscribe(
         result => this.router.navigate(['/anonymous', 'signin'])
       )
+      console.log(this.form.value)
     }
 
   }

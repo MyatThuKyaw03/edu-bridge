@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CourseItemComponent } from './course-item/course-item.component';
 import { FormGroupComponent } from './form-group/form-group.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -12,6 +13,7 @@ import { FormGroupComponent } from './form-group/form-group.component';
   ],
   imports: [
     CommonModule,
+    RouterModule
 
   ],
   exports: [

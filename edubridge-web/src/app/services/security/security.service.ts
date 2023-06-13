@@ -1,21 +1,27 @@
 import { Injectable } from "@angular/core";
 import { SecurityApi } from "../apis/security.api.service";
+import { of } from "rxjs";
 
 @Injectable({providedIn: 'root'})
 export class SecurityService {
 
+  private _users:any[] = []
+  private _teacher:any[]=[]
+
   constructor(private api:SecurityApi) {}
 
   signIn(form:any) {
-    return this.api.signIn(form)
+    return of(this._users.filter(user => user.email == form.email && user.password == form.password))
   }
 
 
   signUp(form:any){
-    return this.api.signUp(form)
+    this._users.push(form)
+    return of(this._users)
   }
 
   teacherSignUp(form:any){
-    return this.api.teacherSignUp(form)
+    this._teacher.push(form)
+    return of(this._teacher)
   }
 }
