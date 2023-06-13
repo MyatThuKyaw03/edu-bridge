@@ -7,6 +7,9 @@ import { TeacherlistComponent } from './teacherlist/teacherlist.component';
 import { TransitionsfromstudentComponent } from './transitionsfromstudent/transitionsfromstudent.component';
 import { TransitionstoteacherComponent } from './transitionstoteacher/transitionstoteacher.component';
 import { CategorylistComponent } from 'src/app/commons/pages/categorylist/categorylist.component';
+import { StudentComponent } from '../student/student.component';
+import { StudentlistComponent } from './studentlist/studentlist.component';
+import { CreateCategoryComponent } from './create-category/create-category.component';
 
 const routes: Routes = [
   {
@@ -24,7 +27,10 @@ const routes: Routes = [
         component: TransitionstoteacherComponent,
       },
       { path: 'categorylist', component: CategorylistComponent },
-      { path: '', component: AdminhomeComponent },
+      { path: 'studentlist', component: StudentlistComponent },
+      { path: 'create-category', component: CreateCategoryComponent },
+
+      { path: 'home', component: AdminhomeComponent },
     ],
   },
 ];

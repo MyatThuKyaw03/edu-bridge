@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CoursedetailsComponent } from 'src/app/commons/pages/coursedetails/coursedetails.component';
 import { CourselistComponent } from 'src/app/commons/pages/courselist/courselist.component';
 import { TeacherdetailsComponent } from 'src/app/commons/pages/teacherdetails/teacherdetails.component';
+import { AnonymousComponent } from '../anonymous/anonymous.component';
 import { CoursemoduleComponent } from './coursemodule/coursemodule.component';
 import { TeacherComponent } from './teacher.component';
 import { TeachercourselistComponent } from './teachercourselist/teachercourselist.component';

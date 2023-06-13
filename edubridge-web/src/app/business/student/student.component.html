@@ -1,2 +1,30 @@
-<p>student works!</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-info">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/student"><i class="bi bi-person-gear"></i> Student Dashboard</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav  mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active"  [routerLink]="'/student'">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" [routerLink]="'/student/courselist'">Other Courses</a>
+        </li>
+      </ul>
+      <div class="nav-item dropdown ms-auto">
+      <a class="nav-link dropdown-toggle ms-auto" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        More Options
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <li><a class="dropdown-item" routerLink="/student/profile">Your Profile</a></li>
+        <li><a class="dropdown-item" href="#">Logout</a></li>
+        </ul>
+    </div>
+
+    </div>
+  </div>
+</nav>
+
 <router-outlet></router-outlet>
