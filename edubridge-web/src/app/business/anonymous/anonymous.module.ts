@@ -12,15 +12,13 @@ import { StudentModule } from '../student/student.module';
 import { WidgetsModule } from '../../commons/widgets/widgets.module';
 import { ReactiveFormsModule } from '@angular/forms';
 
-
-
 @NgModule({
   declarations: [
     AnonymousComponent,
     HomeComponent,
     SigninComponent,
     TeachersignupComponent,
-    StudentsignupComponent
+    StudentsignupComponent,
   ],
   imports: [
     CommonModule,
@@ -29,7 +27,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     StudentModule,
     WidgetsModule,
     ReactiveFormsModule,
-    
-  ]
+  ],
 })
-export class AnonymousModule { }
+export class AnonymousModule {}

@@ -8,6 +8,8 @@ import { TeacherlistComponent } from './teacherlist/teacherlist.component';
 import { TransitionsfromstudentComponent } from './transitionsfromstudent/transitionsfromstudent.component';
 import { TransitionstoteacherComponent } from './transitionstoteacher/transitionstoteacher.component';
 import { AdminteacherdetailsComponent } from './adminteacherdetails/adminteacherdetails.component';
+import { StudentlistComponent } from './studentlist/studentlist.component';
+import { CreateCategoryComponent } from './create-category/create-category.component';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { AdminteacherdetailsComponent } from './adminteacherdetails/adminteacher
     TeacherlistComponent,
     TransitionsfromstudentComponent,
     TransitionstoteacherComponent,
-    AdminteacherdetailsComponent
+    AdminteacherdetailsComponent,
+    StudentlistComponent,
+    CreateCategoryComponent
   ],
   imports: [
     CommonModule,

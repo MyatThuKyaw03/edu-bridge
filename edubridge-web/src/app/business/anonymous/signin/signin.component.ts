@@ -3,25 +3,23 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { SecurityService } from 'src/app/services/security/security.service';
 
-
 @Component({
   selector: 'app-signin',
   templateUrl: './signin.component.html',
-  styles: [
-  ]
+  styles: [],
 })
 export class SigninComponent {
-
-  form:FormGroup
+  form: FormGroup;
 
   constructor(
-    builder:FormBuilder,
-    private security:SecurityService,
-    private router:Router) {
+    builder: FormBuilder,
+    private security: SecurityService,
+    private router: Router
+  ) {
     this.form = builder.group({
       email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.min(4)]]
-    })
+      password: ['', [Validators.required, Validators.min(4)]],
+    });
   }
 
   signIn() {
@@ -39,5 +37,4 @@ export class SigninComponent {
      })
     }
   }
-
 }
