@@ -1,9 +1,9 @@
-<h3><i class="bi bi-pen"></i> Sign Up as a Teacher</h3>
+<h3 class="text-center"><i class="bi bi-pen"></i> Sign Up as a Teacher</h3>
 
 <div class="row mt-3">
-  
-  <div class="col-4">
-    <form [formGroup]="form">
+
+  <div class="container col-4 bg-secondary-subtle  rounded-1 ">
+    <form [formGroup]="form" class="px-4 pt-3">
       <app-form-group [valid]="form.get('name')!.valid" label="Name">
         <input formControlName="name" type="name" class="form-control" placeholder="Enter your Name">
       </app-form-group>
@@ -30,7 +30,7 @@
 
       </div>
 
-      <button type="submit" (click)="teacherSignUp()" class="btn btn-outline-success">
+      <button type="submit" (click)="teacherSignUp()" class="btn btn-outline-success mx-auto">
         <i class="bi bi-unlock"></i> Sign Up
       </button>
     </form>
