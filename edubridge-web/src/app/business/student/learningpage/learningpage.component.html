@@ -1,2 +1,56 @@
-<p>learningpage works!</p>
-<a [routerLink]="['/student/home']">Stu Home</a>
+<div class="container card mt-3 shadow p-3 h-800" id="bg">
+  <div style="height: 60px"></div>
+
+  <div class="">
+    <h1>JDC One Stop</h1>
+  </div>
+
+  <footer class="">
+    <h5>Core Java Lessons</h5>
+    <div class="float-end">
+      <a type="button" (click)="myFunction()">
+        <i class="bi bi-info-circle"></i>
+      </a>
+    </div>
+  </footer>
+</div>
+<div class="" id="myDIV" style="display: none">
+  <div class="container rounded-bottom bg-white border shadow">
+    <p class="mt-3">
+      <b>Subject </b>OneStop BootCamp <br /><br />
+      <b>Room </b>Java Developer Class
+    </p>
+  </div>
+</div>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-3">
+      <div class="list-group" id="list-tab" role="tablist">
+        <a
+          class="list-group-item list-group-item-action"
+          data-toggle="list"
+          role="tab"
+          (click)="onSelectChapter(chapter)"
+          [ngClass]="chapter.no == targetChapter.no ? 'active' : ''"
+          *ngFor="let chapter of chapters"
+          >{{ chapter.no }}</a
+        >
+      </div>
+    </div>
+
+    <div class="col-9 border" style="height: 800px">
+      <div class="tab-content" id="nav-tabContent">
+        <div
+          class="tab-pane fade show active"
+          role="tabpanel"
+          aria-labelledby="chapter1"
+        >
+          <h1>{{ targetChapter.title }}</h1>
+          <br />
+          <p>{{ targetChapter.content }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
