@@ -2,10 +2,10 @@
 
 
 
-  <div class="container mt-4" style="max-width: 500px;">
-    <div class="card rounded-3 shadow-sm">
+  <div class="container-fluid mt-5 " style="width: 100%;" >
+    <div class="card rounded-3 shadow-sm mx-auto bg-secondary-subtle" style="max-width: 500px; --bs-bg-opacity: .3;">
       <div class="text-center fw-bold mt-3" style="font-size: 4rem;">
-        <i class="bi bi-mortarboard"></i>
+        <img src="../../../../assets/images/university.png" style="width: 100px; height: 100px;" class="rounded-circle" alt="">
       <h5 >Login</h5>
 
       </div>
@@ -22,7 +22,7 @@
 
          <div class="d-flex justify-content-center">
           <button [class.disabled]="!form.valid" type="button" (click)="signIn()"
-          class="btn btnsm btn-outline-success my-3 ">
+          class="btn btnsm btn-outline-primary my-3  ">
             Sign In
           </button>
          </div>
