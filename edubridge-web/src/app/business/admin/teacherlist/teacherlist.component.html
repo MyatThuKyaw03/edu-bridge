@@ -1,97 +1,92 @@
-<div class="container mt-3">
+<div class="container">
   <div class="card">
     <div class="card-header">
-      <div class="row">
-        <div class="col-12">
-          <h4 class="text-center">Teacher List</h4>
-        </div>
-      </div>
+      <h4 class="text-center">Teacher List</h4>
     </div>
     <div class="card-body">
-      <div class="col-12">
-        <div class="container">
-          <table class="table table-striped">
-            <thead class="bg-primary">
-              <tr>
-                <th>ID</th>
-                <th>Teacher Name</th>
-                <th>Ph Number</th>
-                <th>Created Courses</th>
-                <th>Details</th>
-                <th>Transitions</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>John Doe</td>
-                <td>09989898</td>
-                <td>4</td>
-                <td>
-                  <a
-                    [routerLink]="['/admin/adminteacherdetails']"
-                    routerLinkActive="active"
-                  >
-                    for Details
-                  </a>
-                </td>
-                <td>
-                  <button
-                    [routerLink]="['/admin/transitionstoteacher']"
-                    class="btn btn-info"
-                  >
-                    transition
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>William</td>
-                <td>09756565</td>
-                <td>3</td>
-                <td>
-                  <a
-                    [routerLink]="['/admin/adminteacherdetails']"
-                    routerLinkActive="active"
-                  >
-                    for Details
-                  </a>
-                </td>
-                <td>
-                  <button
-                    [routerLink]="['/admin/transitionstoteacher']"
-                    class="btn btn-info"
-                  >
-                    transition
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Emma</td>
-                <td>0965545</td>
-                <td>2</td>
-                <td>
-                  <a
-                    [routerLink]="['/admin/adminteacherdetails']"
-                    routerLinkActive="active"
-                  >
-                    for Details
-                  </a>
-                </td>
-                <td>
-                  <button
-                    [routerLink]="['/admin/transitionstoteacher']"
-                    class="btn btn-info"
-                  >
-                    transition
-                  </button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Teacher Name</th>
+            <th>Ph Number</th>
+            <th>Created Courses</th>
+            <th>Details</th>
+            <th>Transitions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>John Doe</td>
+            <td>09989898</td>
+            <td>4</td>
+            <td>
+              <a
+                [routerLink]="['/admin/adminteacherdetails']"
+                routerLinkActive="active"
+                style="text-decoration: none"
+              >
+                Details
+              </a>
+            </td>
+            <td>
+              <a
+                [routerLink]="['/admin/transitionstoteacher']"
+                class="btn btn-sm btn-outline-primary rounded-pill"
+              >
+                Transitions
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>William</td>
+            <td>09756565</td>
+            <td>3</td>
+            <td>
+              <a
+                [routerLink]="['/admin/adminteacherdetails']"
+                routerLinkActive="active"
+                style="text-decoration: none"
+              >
+                Details
+              </a>
+            </td>
+            <td>
+              <a
+                [routerLink]="['/admin/transitionstoteacher']"
+                class="btn btn-sm btn-outline-primary rounded-pill"
+              >
+                Transitions
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Emma</td>
+            <td>0965545</td>
+            <td>2</td>
+            <td>
+              <a
+                [routerLink]="['/admin/adminteacherdetails']"
+                routerLinkActive="active"
+                style="text-decoration: none"
+              >
+                Details
+              </a>
+            </td>
+            <td>
+              <a
+                [routerLink]="['/admin/transitionstoteacher']"
+                class="btn btn-sm btn-outline-primary rounded-pill"
+              >
+                Transitions
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>

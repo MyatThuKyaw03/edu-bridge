@@ -11,10 +11,15 @@ import { StudentComponent } from '../student/student.component';
 import { StudentlistComponent } from './studentlist/studentlist.component';
 import { CreateCategoryComponent } from './create-category/create-category.component';
 
+import { CourselistComponent } from 'src/app/commons/pages/courselist/courselist.component';
+import { TotalAmountComponent } from './total-amount/total-amount.component';
+
 const routes: Routes = [
+  // {path:'admin-login',component:AdminLoginComponent},
   {
     path: '',
     component: AdminComponent,
+
     children: [
       { path: 'adminteacherdetails', component: AdminteacherdetailsComponent },
       { path: 'teacherlist', component: TeacherlistComponent },
@@ -29,6 +34,9 @@ const routes: Routes = [
       { path: 'categorylist', component: CategorylistComponent },
       { path: 'studentlist', component: StudentlistComponent },
       { path: 'create-category', component: CreateCategoryComponent },
+      { path: 'total-amount', component: TotalAmountComponent },
+
+      { path: 'courselist', component: CourselistComponent },
 
       { path: 'home', component: AdminhomeComponent },
     ],

@@ -1,1 +1,86 @@
-<p>create-category works!</p>
+<form class="d-flex" role="search">
+  <input
+    #sea
+    value=""
+    class="form-control me-2"
+    type="search"
+    placeholder="Search"
+    aria-label="Search"
+  />
+  <button
+    class="btn btn-outline-info btn-sm"
+    type="submit"
+    (click)="search(sea.value)"
+  >
+    Search
+  </button>
+</form>
+
+<div class="container mt-3">
+  <div class="list-group icon-link-hover" *ngFor="let item of categories">
+    <button
+      type="button"
+      class="list-group-item list-group-item-action"
+      aria-current="true"
+    >
+      {{ item.name }}
+    </button>
+  </div>
+  <button
+    class="btn btn-outline-success mt-2"
+    data-bs-toggle="modal"
+    data-bs-target="#add-cat"
+  >
+    <i class="bi bi-plus"></i>Add New Category
+  </button>
+</div>
+
+<!-- create-category -->
+
+<div class="modal" tabindex="-1" id="add-cat">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Add New Category</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body mb-3">
+        <form [formGroup]="form">
+          <label for="id">ID</label>
+          <input
+            formControlName="id"
+            type="number"
+            id="id"
+            class="form-control"
+          />
+          <label for="name" class="mb-3">Category Name</label>
+          <input
+            formControlName="name"
+            type="text"
+            id="name"
+            value=""
+            class="form-control text-uppercase"
+          />
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-dismiss="modal"
+          (click)="saveCategory(form.value)"
+        >
+          Save changes
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

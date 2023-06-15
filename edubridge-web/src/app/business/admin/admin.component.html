@@ -10,7 +10,8 @@
         <a
           [routerLink]="['/admin/home']"
           class="fw-bold text-uppercase text-warning text-decoration-none border-bottom border-light pb-3"
-          ><i class="bi bi-amd"></i> Dashboard</a
+        >
+          <i class="bi bi-amd"></i> Dashboard</a
         >
       </div>
 
@@ -21,7 +22,7 @@
         >
           <p class="border-bottom border-info p-2 text-center">
             <i class="bi bi-person-gear"></i>
-            Teacher List
+            <span class="d-none d-md-block">Teacher List</span>
           </p></a
         >
         <a
@@ -30,7 +31,7 @@
         >
           <p class="border-bottom border-info p-2 text-center">
             <i class="bi bi-person-lines-fill"></i>
-            Student List
+            <span class="d-none d-md-block">Student List</span>
           </p></a
         >
         <a
@@ -39,7 +40,7 @@
         >
           <p class="border-bottom border-info p-2 text-center">
             <i class="bi bi-collection"></i>
-            Course List
+            <span class="d-none d-md-block">Course List</span>
           </p></a
         >
         <a
@@ -48,7 +49,7 @@
         >
           <p class="border-bottom border-info p-2 text-center">
             <i class="bi bi-gear-fill"></i>
-            Category
+            <span class="d-none d-md-block">Category</span>
           </p></a
         >
         <a
@@ -57,23 +58,27 @@
         >
           <p class="border-bottom border-info p-2 text-center">
             <i class="bi bi-database-fill"></i>
-            Transitions
+            <span class="d-none d-md-block">Transitions</span>
           </p></a
         >
+
         <a
-          [routerLink]="['/admin/home']"
-          class="text-decoration-none text-white shadow-sm"
+          data-bs-toggle="modal"
+          data-bs-target="#logout"
+          class="text-decoration-none text-danger shadow-sm"
         >
           <p class="border-bottom border-info p-2 text-center">
-            <i class="bi bi-gear"></i>
-            Setting
+            <i class="bi bi-box-arrow-left"></i>
+            <span class="d-none d-md-block">Logout</span>
           </p></a
         >
       </div>
 
       <div class="text-center mt-5">
-        <span class="fst-italic fw-bold text-black d-block">Edu Bridge</span>
-        <small>v.1.0</small>
+        <span class="fst-italic fw-bold text-black d-none d-md-block"
+          >Edu Bridge</span
+        >
+        <small> <span class="d-none d-md-block">v.1.0</span></small>
       </div>
     </div>
 
@@ -85,7 +90,7 @@
           style="width: 100px; height: 100px"
           alt=""
         />
-        <h1 class="text-primary p-3">EDU BRIDGE</h1>
+        <h1 class="text-primary p-2">EDU BRIDGE</h1>
       </div>
       <!-- <div class="w-25 float-end shadow-sm me-3">
         <form class="d-flex" role="search">
@@ -110,7 +115,7 @@
         </button>
       </div> -->
       <br />
-      <hr class="shadow-lg mt-3" />
+      <hr class="shadow-lg" />
 
       <!--      Category Start-->
       <div>
@@ -120,6 +125,39 @@
       <!--**************************-->
 
       <!--Category End-->
+    </div>
+  </div>
+</div>
+<!-- logout modal -->
+
+<div class="modal" tabindex="-1" id="logout">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">LOGOUT</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <p>Are you sure to logout?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Cancel
+        </button>
+        <button
+          [routerLink]="['/anonymous/home']"
+          type="button"
+          class="btn btn-primary"
+          data-bs-dismiss="modal"
+        >
+          Confirm
+        </button>
+      </div>
     </div>
   </div>
 </div>

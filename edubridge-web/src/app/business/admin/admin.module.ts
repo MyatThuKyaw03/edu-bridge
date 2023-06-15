@@ -10,7 +10,8 @@ import { TransitionstoteacherComponent } from './transitionstoteacher/transition
 import { AdminteacherdetailsComponent } from './adminteacherdetails/adminteacherdetails.component';
 import { StudentlistComponent } from './studentlist/studentlist.component';
 import { CreateCategoryComponent } from './create-category/create-category.component';
-
+import { TotalAmountComponent } from './total-amount/total-amount.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,11 +22,9 @@ import { CreateCategoryComponent } from './create-category/create-category.compo
     TransitionstoteacherComponent,
     AdminteacherdetailsComponent,
     StudentlistComponent,
-    CreateCategoryComponent
+    CreateCategoryComponent,
+    TotalAmountComponent,
   ],
-  imports: [
-    CommonModule,
-    AdminRoutingModule
-  ]
+  imports: [CommonModule, AdminRoutingModule, ReactiveFormsModule],
 })
-export class AdminModule { }
+export class AdminModule {}
