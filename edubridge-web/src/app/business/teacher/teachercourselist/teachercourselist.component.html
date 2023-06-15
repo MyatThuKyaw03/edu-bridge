@@ -1,63 +1,113 @@
 <div class="container">
   <div class="row">
-      <div class="col-3"  *ngFor="let course of courses" >
-        <div class="card shadow mb-2">
-          <div class="card-header">
-            <h3 class="card-title text-center text-muted">{{course.courseTitle}}</h3>
-          </div>
-          <img src="{{course.imageUrl}}" class="card-image-bottom w-100" style="width: 120px; height: 190px;" alt="">
-
-          <div class="card-body">
-            <h3 class="card-title text-center">One Stop BootCamp</h3>
-          </div>
-          <div class="card-footer p-3">
-            <div class="d-flex justify-content-between">
-            <a class="btn btn-outline-info" routerLink="/teacher/coursemodule">Check</a>
-            <a class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#courseModal">Add Module</a>
-
-          </div>
-          </div>
+    <div class="col-lg-3 col-md-6 col-sm-12" *ngFor="let course of courses">
+      <div class="card shadow mb-2">
+        <div class="card-header">
+          <h3 class="card-title text-center text-muted">
+            {{ course.courseTitle }}
+          </h3>
         </div>
-      </div>
-    </div>
-    </div>
+        <img
+          src="{{ course.imageUrl }}"
+          class="card-image-bottom w-100"
+          style="width: 120px; height: 190px"
+          alt=""
+        />
 
-
-  <!-- Modal -->
-  <div class="modal fade" id="courseModal" tabindex="-1" aria-labelledby="la" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="la">Add Module</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="card-body">
+          <h3 class="card-title text-center">One Stop BootCamp</h3>
         </div>
-        <div class="modal-body">
-          <form [formGroup]="moduleForm">
-            <div class="form-group mb-2">
-              <label for="title">
-                Module Subtitle
-              </label>
-              <input formControlName="subtitle" type="text" class="form-control" id="title" placeholder="Module Subtitle" >
-            </div>
-            <div class="form-group mb-2">
-              <label for="name">
-                Module Name
-              </label>
-              <input formControlName="name" type="text" class="form-control" id="name" placeholder="Module Name" >
-            </div>
-            <div class="form-group mb-2">
-              <label for="file">
-                Course File
-              </label>
-              <input formControlName="fileName" type="file" class="form-control file-upload" id="file" placeholder="Upload Your File" >
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="submit" class="btn btn-primary" data-bs-dismiss="modal"
-              (click)="add()">Upload</button>
-            </div>
-          </form>
+
+        <div class="card-footer p-3">
+          <div class="d-flex justify-content-between">
+            <a class="btn btn-outline-info" routerLink="/teacher/coursemodule"
+              >Check</a
+            >
+
+            <a
+              class="btn btn-outline-info"
+              data-bs-toggle="modal"
+              data-bs-target="#courseModal"
+              >Add Module</a
+            >
+          </div>
         </div>
       </div>
     </div>
   </div>
+</div>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="courseModal"
+  tabindex="-1"
+  aria-labelledby="la"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="la">Add Module</h5>
+
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="moduleForm">
+          <div class="form-group mb-2">
+            <label for="title"> Module Subtitle </label>
+            <input
+              formControlName="subtitle"
+              type="text"
+              class="form-control"
+              id="title"
+              placeholder="Module Subtitle"
+            />
+          </div>
+          <div class="form-group mb-2">
+            <label for="name"> Module Name </label>
+            <input
+              formControlName="name"
+              type="text"
+              class="form-control"
+              id="name"
+              placeholder="Module Name"
+            />
+          </div>
+          <div class="form-group mb-2">
+            <label for="file"> Course File </label>
+            <input
+              formControlName="fileName"
+              type="file"
+              class="form-control file-upload"
+              id="file"
+              placeholder="Upload Your File"
+            />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button
+              type="submit"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+              (click)="add()"
+            >
+              Upload
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
