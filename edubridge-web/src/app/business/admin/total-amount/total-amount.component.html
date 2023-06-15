@@ -4,7 +4,7 @@
       <div class="list-group" id="list-tab" role="tablist">
         <a
           [routerLink]="['/admin/transitionsfromstudent']"
-          class="list-group-item list-group-item-action active"
+          class="list-group-item list-group-item-action"
           id="list-home-list"
           data-toggle="list"
           role="tab"
@@ -22,7 +22,7 @@
         >
         <a
           [routerLink]="['/admin/total-amount']"
-          class="list-group-item list-group-item-action"
+          class="list-group-item list-group-item-action active"
           id="list-profile-list"
           data-toggle="list"
           role="tab"
@@ -37,27 +37,18 @@
     <table class="table table-striped">
       <thead>
         <tr>
-          <th>Id</th>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Purchased Amount</th>
-          <th>Purchased Date</th>
+          <th>Payment Method</th>
+          <th>Fees from Student</th>
+          <th>Share Fees to Teacher</th>
+          <th>Our Amount</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>1</td>
-          <td>Htoo Aung Chun</td>
-          <td>htoo@gmail.com</td>
+          <td>K Pay</td>
           <td>300000</td>
-          <td>2.11.2023</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Min Ye Mon</td>
-          <td>min@gmail.com</td>
-          <td>300000</td>
-          <td>3.3.2023</td>
+          <td>1000</td>
+          <td>290000</td>
         </tr>
       </tbody>
     </table>

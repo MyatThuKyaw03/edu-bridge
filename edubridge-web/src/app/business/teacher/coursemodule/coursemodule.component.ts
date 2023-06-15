@@ -6,7 +6,8 @@ import { TeacherCourseService } from 'src/app/services/apis/teacher-course.servi
   templateUrl: './coursemodule.component.html',
   styleUrls: ['./coursemodule.component.css']
 })
-export class CoursemoduleComponent implements OnInit{
+export class CoursemoduleComponent implements OnInit {
+  modules: any = [];
 
   info!: any;
 
@@ -14,13 +15,13 @@ export class CoursemoduleComponent implements OnInit{
 
   targetChapter: any = []
 
-  modules: any = []
+
 
   constructor (private teacherService: TeacherCourseService){
 
   }
   ngOnInit(): void {
-    this.modules =  this.teacherService.findAll()
+    this.modules = this.teacherService.findAll();
   }
   onSelectChapter(chapter: any){}
 
@@ -35,4 +36,3 @@ export class CoursemoduleComponent implements OnInit{
   }
 
 }
-
