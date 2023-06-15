@@ -4,20 +4,13 @@ import { TeacherCourseService } from 'src/app/services/apis/teacher-course.servi
 @Component({
   selector: 'app-coursemodule',
   templateUrl: './coursemodule.component.html',
-  styles: [
-  ]
+  styles: [],
 })
-export class CoursemoduleComponent implements OnInit{
+export class CoursemoduleComponent implements OnInit {
+  modules: any = [];
 
-  modules: any = []
-
-  constructor (private teacherService: TeacherCourseService){
-
-  }
+  constructor(private teacherService: TeacherCourseService) {}
   ngOnInit(): void {
-    this.modules =  this.teacherService.findAll()
+    this.modules = this.teacherService.findAll();
   }
-
-
 }
-

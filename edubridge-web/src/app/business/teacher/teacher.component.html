@@ -1,38 +1,75 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-info">
   <div class="container-fluid justify-content-between p-4">
-   <div class="">
-    <a class="navbar-brand p-3 fw-bold text-white" routerLink="/teacher"><i class="bi bi-amd"></i> Teacher Dashboard</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-   </div>
+    <div class="">
+      <a class="navbar-brand p-3 fw-bold text-white" routerLink="/teacher"
+        ><i class="bi bi-amd"></i> Teacher Dashboard</a
+      >
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
     <div class="text-white fw-bold">
-      <div class="collapse navbar-collapse gap-3 " style="font-size: 18px;" id="navbarSupportedContent">
-        <a class="nav-link active mx-3"  [routerLink]="'/teacher'">Home</a>
-        <a [routerLink]="['/teacher/teachercourselist']"  class="nav-link">My Courses</a>
-        <a [routerLink]="['/teacher/courselist']" class="nav-link">Other Course</a>
+      <div
+        class="collapse navbar-collapse gap-3"
+        style="font-size: 18px"
+        id="navbarSupportedContent"
+      >
+        <a class="nav-link active mx-3" [routerLink]="'/teacher'">Home</a>
+        <a [routerLink]="['/teacher/teachercourselist']" class="nav-link"
+          >My Courses</a
+        >
+        <a [routerLink]="['/teacher/courselist']" class="nav-link"
+          >Other Course</a
+        >
         <div class="nav-item dropdown ms-auto">
-        <a class="nav-link dropdown-toggle ms-auto" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          More Options
-        </a>
-        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <li><a class="dropdown-item" routerLink="/teacher/teacherprofile">Your Profile</a></li>
-          <li><a class="dropdown-item" [routerLink]="['/anonymous', 'home']">Logout</a></li>
+          <a
+            class="nav-link dropdown-toggle ms-auto"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            More Options
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li>
+              <a class="dropdown-item" routerLink="/teacher/teacherprofile"
+                >Your Profile</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" [routerLink]="['/anonymous', 'home']"
+                >Logout</a
+              >
+            </li>
           </ul>
-      </div>
-
+        </div>
       </div>
     </div>
   </div>
 </nav>
 
 <div class="container-fluid p-3 mb-4">
-  <div class=" float-end gap-3 mb-2">
-
-  <button class="btn btn-outline-info me-3 fw-bold " data-bs-toggle="modal" data-bs-target="#exampleModal" routerLink="/teacher"><i class="bi bi-plus-circle-fill me-2"></i>Create Course</button>
-  <!-- <button class="btn btn-outline-info" routerLink="/teacher/teachercourselist">Own Courses</button> -->
-  <!-- <button class="btn btn-outline-info" routerLink="/teacher/courselist">Other Courses</button> -->
-
+  <div class="float-end gap-3 mb-2">
+    <button
+      class="btn btn-outline-info me-3 fw-bold"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+      routerLink="/teacher"
+    >
+      <i class="bi bi-plus-circle-fill me-2"></i>Create Course
+    </button>
+    <!-- <button class="btn btn-outline-info" routerLink="/teacher/teachercourselist">Own Courses</button> -->
+    <!-- <button class="btn btn-outline-info" routerLink="/teacher/courselist">Other Courses</button> -->
   </div>
   <hr class="border-bottom border-secondary shadow-sm mt-5">
   </div>
@@ -42,58 +79,110 @@
 
 <!-- Modal box Techer crud  -->
 
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Add New Course</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form [formGroup]="form">
-
-            <div class="form-group">
-              <label for="id">Id</label>
-              <input type="number" formControlName="id" class="form-control" placeholder="Id" id="id">
-            </div>
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add New Course</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="form">
+          <div class="form-group">
+            <label for="id">Id</label>
+            <input
+              type="number"
+              formControlName="id"
+              class="form-control"
+              placeholder="Id"
+              id="id"
+            />
+          </div>
 
           <div class="form-group mt-2">
-          <label for="title">Course's Title</label>
-          <input formControlName="courseTitle" type="text" class="form-control" placeholder="Place Your Course's Title" id="title">
-        </div>
-        <div class="form-group mt-2">
-          <label for="Course Field">Select Category</label>
-          <select formControlName="category" class="form-control" name="Course Field" id="course">
-            <option value="Java Basic Course">Java Basic Course</option>
-            <option value="One Stop Weekday">One Stop Weekday</option>
-            <option value="One Stop Weekend">One Stop Weekend</option>
-          </select>
-        </div>
-        <div class="form-group mt-2">
-          <label for="price">Price</label>
-          <input formControlName="price" type="number" id="price" placeholder="Set Your Course Fee" class="form-control">
-        </div>
-        <div class="form-group mt-2">
-          <label for="desc">Description</label>
-          <textarea formControlName="descricption" name="" id="desc" cols="30" rows="5" placeholder="Description" class="form-control"></textarea>
-        </div>
+            <label for="title">Course's Title</label>
+            <input
+              formControlName="courseTitle"
+              type="text"
+              class="form-control"
+              placeholder="Place Your Course's Title"
+              id="title"
+            />
+          </div>
+          <div class="form-group mt-2">
+            <label for="Course Field">Select Category</label>
+            <select
+              formControlName="category"
+              class="form-control"
+              name="Course Field"
+              id="course"
+            >
+              <option value="Java Basic Course">Java Basic Course</option>
+              <option value="One Stop Weekday">One Stop Weekday</option>
+              <option value="One Stop Weekend">One Stop Weekend</option>
+            </select>
+          </div>
+          <div class="form-group mt-2">
+            <label for="price">Price</label>
+            <input
+              formControlName="price"
+              type="number"
+              id="price"
+              placeholder="Set Your Course Fee"
+              class="form-control"
+            />
+          </div>
+          <div class="form-group mt-2">
+            <label for="desc">Description</label>
+            <textarea
+              formControlName="descricption"
+              name=""
+              id="desc"
+              cols="30"
+              rows="5"
+              placeholder="Description"
+              class="form-control"
+            ></textarea>
+          </div>
 
-        <div class="form-group mt-2">
-          <label for="img">ImageUrl</label>
-          <input type="text" formControlName="imageUrl" id="img" placeholder="Image Url" class="form-control">
-        </div>
-
+          <div class="form-group mt-2">
+            <label for="img">ImageUrl</label>
+            <input
+              type="text"
+              formControlName="imageUrl"
+              id="img"
+              placeholder="Image Url"
+              class="form-control"
+            />
+          </div>
         </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" (click)="submit(form.value)">Save</button>
-        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+        <button
+          type="submit"
+          class="btn btn-primary"
+          data-bs-dismiss="modal"
+          (click)="submit(form.value)"
+        >
+          Save
+        </button>
       </div>
     </div>
   </div>
+</div>
 
-
-  <router-outlet></router-outlet>
-
-
+<router-outlet></router-outlet>
