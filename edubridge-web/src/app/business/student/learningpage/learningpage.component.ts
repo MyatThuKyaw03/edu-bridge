@@ -8,6 +8,10 @@ import { Component } from '@angular/core';
 export class LearningpageComponent {
   info!: any;
 
+  constructor(){
+
+  }
+
   targetChapter = {
     no: 'Chapter 1',
     title: 'What is Java Programming',
