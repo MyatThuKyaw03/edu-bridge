@@ -3,10 +3,10 @@
 
 
   <div class="container-fluid mt-5 " style="width: 100%;" >
-    <div class="card rounded-3 shadow-sm mx-auto bg-secondary-subtle" style="max-width: 500px; --bs-bg-opacity: .3;">
+    <div class="card rounded-3 shadow-sm mx-auto bg-secondary-subtle bg-opacity-25 col-sm-10" style="max-width: 500px; --bs-bg-opacity: .3;">
       <div class="text-center fw-bold mt-3" style="font-size: 4rem;">
         <img src="../../../../assets/images/university.png" style="width: 100px; height: 100px;" class="rounded-circle" alt="">
-      <h5 >Login</h5>
+      <h5 class="fw-bold font-monospace" >Login</h5>
 
       </div>
       <div class="card-body">
@@ -20,9 +20,9 @@
             <input formControlName="password" type="password" placeholder="Enter Password" class="form-control">
           </app-form-group>
 
-         <div class="d-flex justify-content-center">
+         <div class="text-center mt-5">
           <button [class.disabled]="!form.valid" type="button" (click)="signIn()"
-          class="btn btnsm btn-outline-primary my-3  ">
+          class="btn btn-primary my-3 px-5 ">
             Sign In
           </button>
          </div>
