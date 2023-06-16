@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { Observable, of } from "rxjs";
+
 
 
 @Injectable(
@@ -8,9 +8,13 @@ import { Observable, of } from "rxjs";
   }
 )
 export class TeacherCourseService{
-  moduleList:any =[]
+  moduleList:any =[{
+    chapter: '',
+      title: '',
+      lecture: ''
+  }]
 
-  add(value: Object | null) : any{
+  add(value:any){
     this.moduleList.push(value)
   }
 

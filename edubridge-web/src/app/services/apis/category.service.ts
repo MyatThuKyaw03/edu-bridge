@@ -2,18 +2,15 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 
 @Injectable({
-  providedIn: 'any',
+  providedIn: 'root',
 })
 export class CategoryService {
   constructor() {}
 
-  findAll(): Observable<any[]> {
-    return of(this.categories);
-  }
+
   categories: any[] = [
-    { id: 1, name: 'BUSINESS' },
-    { id: 2, name: 'INFORMATION TECHONOLOGY' },
-    { id: 3, name: 'LANGUAGES' },
+    {id: 1,name: 'IT'},
+    {id: 2 , name: 'Business'}
   ];
   //  [
   //   { id: 1, name: 'Computer Science' },
@@ -27,8 +24,12 @@ export class CategoryService {
     }
   }
 
-  saveCategory(catname: any) {
-    this.categories.push(catname);
-    console.log(this.categories);
+  findAll(): Observable<any[]> {
+    return of(this.categories);
+  }
+
+  saveCategory(catname: any): Observable<any> {
+    //this.categories.push(catname)
+    return of(catname);
   }
 }

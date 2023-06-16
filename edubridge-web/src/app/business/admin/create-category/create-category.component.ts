@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { CategoryService } from 'src/app/services/apis/category.service';
 
@@ -6,7 +6,8 @@ import { CategoryService } from 'src/app/services/apis/category.service';
   templateUrl: './create-category.component.html',
   styleUrls: ['./create-category.component.css'],
 })
-export class CreateCategoryComponent {
+export class CreateCategoryComponent implements OnInit {
+
   form: FormGroup;
 
   categories: any[] = [];
@@ -22,10 +23,17 @@ export class CreateCategoryComponent {
       id: '',
       name: '',
     });
-    service.findAll().subscribe((c) => (this.categories = c));
   }
 
-  saveCategory(catname: any) {
-    this.service.saveCategory(catname);
+  ngOnInit(): void {
+    this.findAll()
+  }
+
+  findAll() {
+    return this.service.findAll().subscribe(result => this.categories = result)
+  }
+
+  saveCategory(category: any) {
+    this.service.saveCategory(category).subscribe(result => this.categories.push(result));
   }
 }

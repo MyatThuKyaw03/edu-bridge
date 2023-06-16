@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { CategoryService } from 'src/app/services/apis/category.service';
 import { CourseService } from 'src/app/services/apis/course.service';
@@ -7,7 +7,7 @@ import { CourseService } from 'src/app/services/apis/course.service';
   selector: 'app-teacher',
   templateUrl: './teacher.component.html',
 })
-export class TeacherComponent {
+export class TeacherComponent implements OnInit {
 
 
   form:FormGroup
@@ -22,7 +22,11 @@ export class TeacherComponent {
       descricption: '',
       imageUrl: ''
     })
-    this.categoryService.findAll().subscribe(result => {this.categoryList = result})
+
+  }
+
+  ngOnInit(): void {
+    this.categoryService.findAll().subscribe(result => this.categoryList = result)
   }
 
   submit(value: any) {

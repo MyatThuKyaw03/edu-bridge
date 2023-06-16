@@ -7,8 +7,6 @@ import { TeacherCourseService } from 'src/app/services/apis/teacher-course.servi
   styleUrls: ['./coursemodule.component.css']
 })
 export class CoursemoduleComponent implements OnInit {
-  modules: any = [];
-
   info!: any;
 
   chapters: any = []
@@ -21,9 +19,12 @@ export class CoursemoduleComponent implements OnInit {
 
   }
   ngOnInit(): void {
-    this.modules = this.teacherService.findAll();
+    this.chapters = this.teacherService.findAll();
+    console.log(this.chapters)
   }
-  onSelectChapter(chapter: any){}
+  onSelectChapter(chapter: any){
+    this.targetChapter=chapter;
+  }
 
   myFunction() {
     this.info = document.getElementById('myDIV');

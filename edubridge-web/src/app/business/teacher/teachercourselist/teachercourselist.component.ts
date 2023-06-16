@@ -19,9 +19,9 @@ export class TeachercourselistComponent implements OnInit{
     private teacherService:TeacherCourseService){
 
     this.moduleForm = builder.group({
-      subtitle: '',
-      name: '',
-      file: ''
+      chapter: '',
+      title: '',
+      lecture: ''
     })
     // console.log(this.moduleForm.value) //object
 
@@ -33,8 +33,6 @@ export class TeachercourselistComponent implements OnInit{
 
 
   add() {
-    console.log(this.moduleForm.value)
-
     this.teacherService.add(this.moduleForm.value);
   }
 

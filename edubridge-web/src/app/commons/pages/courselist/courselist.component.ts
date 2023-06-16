@@ -14,6 +14,5 @@ export class CourselistComponent implements OnInit{
   constructor(private courseService: CourseService){}
   ngOnInit(): void {
     this.courses = this.courseService.findAll();
-    console.log(this.courses)
   }
 }

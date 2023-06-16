@@ -32,9 +32,9 @@
           data-toggle="list"
           role="tab"
           (click)="onSelectChapter(chapter)"
-          [ngClass]="chapter.no == targetChapter.no ? 'active' : ''"
+          [ngClass]="chapter.chapter == targetChapter.no ? 'active' : ''"
           *ngFor="let chapter of chapters"
-          >{{ chapter.no }}</a
+          >{{ chapter.chapter }}</a
         >
       </div>
     </div>
@@ -48,7 +48,7 @@
         >
           <h1>{{ targetChapter.title }}</h1>
           <br />
-          <p>{{ targetChapter.content }}</p>
+          <p>{{ targetChapter.lecture }}</p>
         </div>
       </div>
     </div>
