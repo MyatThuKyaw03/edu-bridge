@@ -1,139 +1,36 @@
-<div class="container">
-  <div class="row mt-3">
-    <div class="col-lg-4 col-sm-12 col-md-6">
-      <div class="card">
-        <img
-          src="/assets/images/course-cover.jpg"
-          alt="Java Programming Language"
-        />
-        <h1>Java Programming Language</h1>
-        <p class="price">$19.99</p>
-        <p>
-          <b>Java</b>a high-level, class-based, object-oriented programming
-          language that is designed to have as few implementation dependencies
-          as possible.
-        </p>
-        <button
-          type="button"
-          class="btn btn-primary"
-          routerLink="/student/learningpage"
-        >
-          Learn
-        </button>
-      </div>
-    </div>
-    <div class="col-lg-4 col-sm-12 col-md-6">
-      <div class="card">
-        <img
-          src="/assets/images/course-cover.jpg"
-          alt="Java Programming Language"
-        />
-        <h1>Java Programming Language</h1>
-        <p class="price">$19.99</p>
-        <p>
-          <b>Java</b>a high-level, class-based, object-oriented programming
-          language that is designed to have as few implementation dependencies
-          as possible.
-        </p>
-        <button
-          type="button"
-          class="btn btn-primary"
-          routerLink="/student/learningpage"
-        >
-          Learn
-        </button>
-      </div>
-    </div>
-    <div class="col-lg-4 col-sm-12 col-md-6">
-      <div class="card">
-        <img
-          src="/assets/images/course-cover.jpg"
-          alt="Java Programming Language"
-        />
-        <h1>Java Programming Language</h1>
-        <p class="price">$19.99</p>
-        <p>
-          <b>Java</b>a high-level, class-based, object-oriented programming
-          language that is designed to have as few implementation dependencies
-          as possible.
-        </p>
-        <button
-          type="button"
-          class="btn btn-primary"
-          routerLink="/student/learningpage"
-        >
-          Learn
-        </button>
+<div class="row mt-3">
+  <div class="col-md-9">
+    <div class="row">
+      <div class="mb-3">
+        <form [formGroup]="searchForm" class="card-body">
+          <div class="row ms-sm-3 mb-2">
+            <div class="col-md-6 col-sm-9">
+              <input
+                formControlName="keyword"
+                type="text"
+                placeholder="Search Keyword"
+                class="form-control"
+              />
+            </div>
+            <div class="col-12 col-sm-3">
+              <button (click)="search()" class="btn btn-outline-primary">
+                <i class="bi bi-search"></i> Search
+              </button>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   </div>
 
-  <div class="row mt-3">
-    <div class="col-4">
-      <div class="card">
-        <img
-          src="/assets/images/course-cover.jpg"
-          alt="Java Programming Language"
-        />
-        <h1>Java Programming Language</h1>
-        <p class="price">$19.99</p>
-        <p>
-          <b>Java</b>a high-level, class-based, object-oriented programming
-          language that is designed to have as few implementation dependencies
-          as possible.
-        </p>
-        <button
-          type="button"
-          class="btn btn-primary"
-          routerLink="/student/learningpage"
-        >
-          Learn
-        </button>
-      </div>
-    </div>
-    <div class="col-4">
-      <div class="card">
-        <img
-          src="/assets/images/course-cover.jpg"
-          alt="Java Programming Language"
-        />
-        <h1>Java Programming Language</h1>
-        <p class="price">$19.99</p>
-        <p>
-          <b>Java</b>a high-level, class-based, object-oriented programming
-          language that is designed to have as few implementation dependencies
-          as possible.
-        </p>
-        <button
-          type="button"
-          class="btn btn-primary"
-          routerLink="/student/learningpage"
-        >
-          Learn
-        </button>
-      </div>
-    </div>
-    <div class="col-4">
-      <div class="card">
-        <img
-          src="/assets/images/course-cover.jpg"
-          alt="Java Programming Language"
-        />
-        <h1>Java Programming Language</h1>
-        <p class="price">$19.99</p>
-        <p>
-          <b>Java</b>a high-level, class-based, object-oriented programming
-          language that is designed to have as few implementation dependencies
-          as possible.
-        </p>
-        <button
-          type="button"
-          class="btn btn-primary"
-          routerLink="/student/learningpage"
-        >
-          Learn
-        </button>
-      </div>
+  <div class="container shadow">
+    <div class="row" *ngFor="let item of courseList">
+      <a routerLink="/student/learningpage" style="text-decoration: none">
+        <app-course-item
+          [course]="item"
+          (showDetailsListener)="showDetails($event)"
+        ></app-course-item
+      ></a>
     </div>
   </div>
 </div>

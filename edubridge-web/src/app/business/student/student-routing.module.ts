@@ -8,23 +8,27 @@ import { PurchasedcoursesComponent } from './purchasedcourses/purchasedcourses.c
 import { StudentComponent } from './student.component';
 import { StudenthomeComponent } from './studenthome/studenthome.component';
 import { StudentprofileComponent } from './studentprofile/studentprofile.component';
+import { CourseItemComponent } from 'src/app/commons/widgets/course-item/course-item.component';
 
 const routes: Routes = [
-    {path: '',component: StudentComponent,children: [
-      {path: 'purchasedcourses',component: PurchasedcoursesComponent},
-      {path: 'learningpage',component: LearningpageComponent},
-      {path: 'profile', component: StudentprofileComponent},
-      {path: 'courselist', component: CourselistComponent},
-      {path: 'teacherdetails',component: TeacherdetailsComponent},
-      {path: 'coursedetails',component: CoursedetailsComponent},
-      {path: '',component: StudenthomeComponent}
-    ]}
-
-
+  {
+    path: '',
+    component: StudentComponent,
+    children: [
+      { path: 'purchasedcourses', component: PurchasedcoursesComponent },
+      { path: 'learningpage', component: LearningpageComponent },
+      { path: 'profile', component: StudentprofileComponent },
+      { path: 'courselist', component: CourselistComponent },
+      { path: 'teacherdetails', component: TeacherdetailsComponent },
+      { path: 'coursedetails', component: CoursedetailsComponent },
+      { path: 'course-item', component: CourseItemComponent },
+      { path: '', component: StudenthomeComponent },
+    ],
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class StudentRoutingModule { }
+export class StudentRoutingModule {}

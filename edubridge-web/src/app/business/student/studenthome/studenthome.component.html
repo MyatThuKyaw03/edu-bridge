@@ -1,20 +1,60 @@
-<h3 class="text-primary my-3 text-center">Your Own Courses</h3>
-<div class="container mt-3">
-  <div class="row">
-    <div class="col-4" *ngFor="let course of courseList">
-        <div class="card mb-2" routerLink="/student/learningpage">
-          <img src="{{course.bg}}" class="card-image-bottom" alt="">
+<div class="card text-center">
+  <div
+    class="container card-header shadow bg-dark border border-danger border border-4"
+  >
+    <img
+      src="/assets/images/onlinelearn.jpg"
+      alt="Light Your Future"
+      style="width: 50%"
+    />
+  </div>
+  <div class="card-body">
+    <h2 class="card-title">Welcome From Our EDUBRIDGE</h2>
+    <p class="card-text" style="opacity: 0.5">Build Your Future Together</p>
+    <p>
+      Ever since I first started to travel, I have enjoyed learning new things.
+      I became a curious person and wanted to know more about the world around
+      me. I felt like my brain is at its best when challenged to learn something
+      different, and there are always new facts to learn about the world.
+      Whether it be a new food recipe, a new language or something as complex as
+      machine learning, I enjoy picking up something different. I love feeling
+      like my mind is expanding with information. And as I wrote in one of my
+      previous blogs, ‘8 reasons why I love to travel’, it is crucial for me to
+      do something outside of my comfort zone every day. At this age of time,
+      while most people still dread sitting in one spot for an hour to learn
+      something new, I find it immensely enjoyable. I become so curious that I
+      watch my online courses at 2x speed and read books like binge-watching an
+      exciting TV series. In this article, I will discuss eight reasons why I
+      love to learn new things.
+    </p>
+  </div>
 
-          <div class="card-body">
-            <h3 class="card-title text-center">{{course.title}}</h3>
-          </div>
-          <div class="card-footer">
-            <div class="d-flex justify-content-between">
-            <a routerLink="/student/coursedetails">Details</a>
-            <a routerLink="/student/learningpage">Learn</a>
-          </div>
-          </div>
-        </div>
-    </div>
+  <div class="container shadow">
+    <img
+      src="/assets/images/show-text.jpg"
+      alt="Light Your Future"
+      style="width: 100%; height: 100%"
+    />
+  </div>
+
+  <div
+    class="card-footer text-center"
+    style="background-color: black; margin-bottom: 0"
+  >
+    <a href="https://www.facebook.com/login/" class="p-2"
+      ><i class="bi bi-facebook"></i
+    ></a>
+    <a href="https://www.pinterest.com/login/" class="p-2"
+      ><i class="bi bi-pinterest"></i
+    ></a>
+    <a href="https://twitter.com/login" class="p-2"
+      ><i class="bi bi-twitter"></i
+    ></a>
+    <a href="https://www.linkedin.com/login" class="p-2"
+      ><i class="bi bi-linkedin"></i
+    ></a>
+    <p class="text-white">
+      Powered by <a href="#" target="_blank">EDUBRIDGE</a>
+    </p>
   </div>
 </div>
