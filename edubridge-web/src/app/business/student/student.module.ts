@@ -8,8 +8,8 @@ import { StudentprofileComponent } from './studentprofile/studentprofile.compone
 import { LearningpageComponent } from './learningpage/learningpage.component';
 import { PagesModule } from 'src/app/commons/pages/pages.module';
 import { StudenthomeComponent } from './studenthome/studenthome.component';
-
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { WidgetsModule } from '../../commons/widgets/widgets.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,9 @@ import { StudenthomeComponent } from './studenthome/studenthome.component';
   imports: [
     CommonModule,
     StudentRoutingModule,
-    PagesModule
-  ]
+    PagesModule,
+    ReactiveFormsModule,
+    WidgetsModule,
+  ],
 })
-export class StudentModule { }
+export class StudentModule {}
