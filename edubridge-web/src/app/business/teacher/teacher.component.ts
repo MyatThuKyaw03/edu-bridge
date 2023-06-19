@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { CategoryService } from 'src/app/services/apis/category.service';
 import { CourseService } from 'src/app/services/apis/course.service';
 
@@ -15,12 +15,12 @@ export class TeacherComponent implements OnInit {
 
   constructor(builder: FormBuilder,private courseService : CourseService,private categoryService: CategoryService){
     this.form=builder.group({
-      id: '',
-      courseTitle: '',
-      category: '',
-      price: '',
-      descricption: '',
-      imageUrl: ''
+      id: ['',Validators.required],
+      courseTitle: ['',Validators.required],
+      category: ['',Validators.required],
+      price: ['',Validators.required],
+      descricption: ['',Validators.required],
+      imageUrl: ['',Validators.required]
     })
 
   }

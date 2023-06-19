@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { CourseService } from 'src/app/services/apis/course.service';
 import { TeacherCourseService } from 'src/app/services/apis/teacher-course.service';
 
@@ -19,9 +19,9 @@ export class TeachercourselistComponent implements OnInit{
     private teacherService:TeacherCourseService){
 
     this.moduleForm = builder.group({
-      chapter: '',
-      title: '',
-      lecture: ''
+      chapter: ['',Validators.required],
+      title: ['',Validators.required],
+      lecture: ['',Validators.required]
     })
     // console.log(this.moduleForm.value) //object
 

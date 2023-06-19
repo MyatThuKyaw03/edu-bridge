@@ -100,6 +100,7 @@
             <button
               type="submit"
               class="btn btn-primary"
+              [class.disabled]="!moduleForm.valid"
               data-bs-dismiss="modal"
               (click)="add()"
             >
