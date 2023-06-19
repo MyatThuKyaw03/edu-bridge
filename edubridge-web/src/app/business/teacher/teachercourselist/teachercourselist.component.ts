@@ -28,7 +28,7 @@ export class TeachercourselistComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    this.courses = this.courseService.findAll();
+    this.courseService.findAll().subscribe(result => {this.courses = result})
   }
 
 

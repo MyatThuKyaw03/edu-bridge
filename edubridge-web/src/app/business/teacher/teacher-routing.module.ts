@@ -12,13 +12,13 @@ import { TeacherprofileComponent } from './teacherprofile/teacherprofile.compone
 
 const routes: Routes = [
   {path: '',component: TeacherComponent ,children: [
-    {path: 'teachercourselist',component: TeachercourselistComponent},
+  {path: 'teachercourselist',component: TeachercourselistComponent},
   {path: 'teacherprofile',component: TeacherprofileComponent},
   {path: 'coursemodule',component: CoursemoduleComponent},
   {path: 'courselist',component: CourselistComponent},
   {path: 'coursedetails',component: CoursedetailsComponent},
   {path: 'teacherdetails',component: TeacherdetailsComponent},
-  {path: '',component: TeacherhomeComponent}
+  {path: '', component: TeacherhomeComponent}
   ]},
 
 ];

@@ -38,8 +38,8 @@ export class CourseService {
     this.courseList.push(data);
   }
 
-  findAll(): any {
-    return this.courseList;
+  findAll(): Observable<any[]> {
+    return of (this.courseList);
   }
 
   private result: any[] = [
