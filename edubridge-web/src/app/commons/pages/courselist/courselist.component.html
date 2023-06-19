@@ -1,20 +1,60 @@
-<div class="container mt-3">
+<!-- <div class="container mt-3">
   <div class="row">
-    <div class="col-4"  *ngFor="let course of courses" >
-      <div class="card mb-2" >
-        <img src="{{course.imageUrl}}" class="card-image-bottom w-100" alt="">
+    <div class="col-4" *ngFor="let course of courses">
+      <div class="card mb-2">
+        <img
+          src="{{ course.imageUrl }}"
+          class="card-image-bottom w-100"
+          alt=""
+        />
 
         <div class="card-body">
-          <h3 class="card-title text-center">{{course.courseTitle}}</h3>
+          <h3 class="card-title text-center">{{ course.courseTitle }}</h3>
         </div>
         <div class="card-footer">
           <div class="d-flex justify-content-between">
-          <a>Details</a>
-          <a >Learn</a>
-        </div>
+            <a>Details</a>
+            <a>Learn</a>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
+<div class="row mt-3">
+  <div class="col-md-9">
+    <div class="row">
+      <div class="mb-3">
+        <form [formGroup]="searchForm" class="card-body">
+          <div class="row ms-sm-3 mb-2">
+            <div class="col-md-6 col-sm-9">
+              <input
+                formControlName="keyword"
+                type="text"
+                placeholder="Search Keyword"
+                class="form-control"
+              />
+            </div>
+            <div class="col-12 col-sm-3">
+              <button (click)="search()" class="btn btn-outline-primary">
+                <i class="bi bi-search"></i> Search
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="container shadow">
+    <div class="row" *ngFor="let item of courseList">
+      <a routerLink="/student/learningpage" style="text-decoration: none">
+        <app-course-item
+          [course]="item"
+          (showDetailsListener)="showDetails($event)"
+        ></app-course-item
+      ></a>
+    </div>
+  </div>
+</div>

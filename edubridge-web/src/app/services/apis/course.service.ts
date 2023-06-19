@@ -1,85 +1,99 @@
-
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 
 @Injectable({
-  providedIn: 'any'
+  providedIn: 'any',
 })
 export class CourseService {
+  constructor() {}
 
-  constructor() { }
-
-  searchByCategory(id: number):Observable<any[]> {
-    return of(this.result)
+  searchByCategory(id: number): Observable<any[]> {
+    return of(this.result);
   }
 
-  search(value: any):Observable<any[]> {
-    return of(this.result)
+  search(value: any): Observable<any[]> {
+    return of(this.result);
   }
-  courseList: any=[]
-  save(data:any) {
+  courseList: any = [
+    {
+      id: '1',
+      courseTitle: 'Java',
+      category: 'Programming',
+      price: '$50',
+      descricption: 'You can learn programming from beginning',
+      imageUrl:
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Gutenberg_Bible%2C_Lenox_Copy%2C_New_York_Public_Library%2C_2009._Pic_01.jpg/640px-Gutenberg_Bible%2C_Lenox_Copy%2C_New_York_Public_Library%2C_2009._Pic_01.jpg',
+    },
+    {
+      id: '1',
+      courseTitle: 'Python',
+      category: 'Programming',
+      price: '$50',
+      descricption: 'You can learn programming from beginning',
+      imageUrl:
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Gutenberg_Bible%2C_Lenox_Copy%2C_New_York_Public_Library%2C_2009._Pic_01.jpg/640px-Gutenberg_Bible%2C_Lenox_Copy%2C_New_York_Public_Library%2C_2009._Pic_01.jpg',
+    },
+  ];
+  save(data: any) {
     this.courseList.push(data);
-
   }
 
-  findAll():any{
-   return this.courseList;
+  findAll(): any {
+    return this.courseList;
   }
 
-  private result:any[] = [
+  private result: any[] = [
     {
       id: 1,
       name: 'Java Basic',
       category: {
         id: 1,
-        name: 'Computer Science'
+        name: 'Computer Science',
       },
       description: 'Entry course of Java Programming. Basic of the basic.',
       teacher: {
         id: 1,
-        name: 'Mr Hank'
-      }
+        name: 'Mr Hank',
+      },
     },
     {
       id: 1,
       name: 'Java Basic',
       category: {
         id: 1,
-        name: 'Computer Science'
+        name: 'Computer Science',
       },
       description: 'Entry course of Java Programming. Basic of the basic.',
       teacher: {
         id: 1,
-        name: 'Mr Hank'
-      }
+        name: 'Mr Hank',
+      },
     },
     {
       id: 1,
       name: 'Java Basic',
       category: {
         id: 1,
-        name: 'Computer Science'
+        name: 'Computer Science',
       },
       description: 'Entry course of Java Programming. Basic of the basic.',
       teacher: {
         id: 1,
-        name: 'Mr Hank'
-      }
+        name: 'Mr Hank',
+      },
     },
     {
       id: 1,
       name: 'Java Basic',
       category: {
         id: 1,
-        name: 'Computer Science'
+        name: 'Computer Science',
       },
       description: 'Entry course of Java Programming. Basic of the basic.',
       teacher: {
         id: 1,
-        name: 'Mr Hank'
-      }
+        name: 'Mr Hank',
+      },
     },
-
-  ]
-
+  ];
 }

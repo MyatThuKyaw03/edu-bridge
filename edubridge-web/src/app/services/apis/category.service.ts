@@ -7,10 +7,12 @@ import { Observable, of } from 'rxjs';
 export class CategoryService {
   constructor() {}
 
-
   categories: any[] = [
-    {id: 1,name: 'IT'},
-    {id: 2 , name: 'Business'}
+    { id: 1, name: 'Information Technology' },
+    { id: 2, name: 'Internation Relations' },
+    { id: 3, name: 'Nature and Science' },
+    { id: 4, name: 'Languages' },
+    { id: 5, name: 'Religion And Beliefs' },
   ];
   //  [
   //   { id: 1, name: 'Computer Science' },
