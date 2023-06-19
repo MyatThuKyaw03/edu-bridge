@@ -17,23 +17,6 @@
         </span>
       </div>
     </div>
-
-    <div>
-      <h4><i class="bi bi-people-fill"></i> Teacher List</h4>
-      <div class="list-group">
-        <span
-          (click)="searchByCategory(item.id)"
-          class="list-group-item"
-          *ngFor="let item of categories"
-        >
-          <a
-            class="text-decoration-none"
-            [routerLink]="['/anonymous/signup/studentsignup']"
-            >{{ item.name }}</a
-          >
-        </span>
-      </div>
-    </div>
   </div>
 
   <div class="col-md-9">
