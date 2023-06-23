@@ -14,22 +14,19 @@ export class CategoryService {
     { id: 4, name: 'Languages' },
     { id: 5, name: 'Religion And Beliefs' },
   ];
-  //  [
-  //   { id: 1, name: 'Computer Science' },
-  //   { id: 2, name: 'Japanese Language' },
-  //   { id: 3, name: 'ICGSE O Level' },
-  // ];
 
+
+  //public
   search(keywords: any) {
     if (keywords == this.categories) {
     } else {
     }
   }
-
+  //public
   findAll(): Observable<any[]> {
     return of(this.categories);
   }
-
+  //admin
   saveCategory(catname: any): Observable<any> {
     //this.categories.push(catname)
     return of(catname);

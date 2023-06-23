@@ -1,8 +1,11 @@
 import { Injectable } from "@angular/core";
 import { Observable, of } from "rxjs";
+import { API } from "src/environment/environment";
 import { LoginUser } from "../dto/login-user";
 import { StudentSignUp } from "../dto/signup-student";
 import { TeacherSignUp } from "../dto/signup-teacher";
+
+const DOMAIN = `${API}/public/security`
 
 @Injectable({providedIn: 'any'})
 export class SecurityApi {

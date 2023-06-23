@@ -1,7 +1,8 @@
 import { Injectable } from "@angular/core";
+import { Observable, of } from "rxjs";
+import { API } from "src/environment/environment"
 
-
-
+const TEACHER_DOMAIN=`${API}/teacher/module-list`
 @Injectable(
   {
     providedIn: 'root'
@@ -14,11 +15,12 @@ export class TeacherCourseService{
       lecture: ''
   }]
 
+  //teacher
   add(value:any){
     this.moduleList.push(value)
   }
-
-  findAll(){
-   return this.moduleList;
+  //public
+  findAll() : Observable<any[]>{
+   return of (this.moduleList);
 }
 }

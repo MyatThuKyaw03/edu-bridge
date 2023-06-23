@@ -19,7 +19,7 @@ export class CoursemoduleComponent implements OnInit {
 
   }
   ngOnInit(): void {
-    this.chapters = this.teacherService.findAll();
+    this.teacherService.findAll().subscribe(result => {this.chapters = result});
   }
   onSelectChapter(chapter: any){
     this.targetChapter=chapter;
