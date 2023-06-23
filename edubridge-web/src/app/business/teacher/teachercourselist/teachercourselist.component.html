@@ -1,35 +1,65 @@
-<div class="container">
+<div class="container shadow">
   <div class="row">
-    <div class="col-lg-3 col-md-6 col-sm-12" *ngFor="let course of courses">
-      <div class="card shadow mb-2">
-        <div class="card-header">
-          <h3 class="card-title text-center text-muted">
-            {{ course.courseTitle }}
-          </h3>
-        </div>
-        <img
-          src="{{ course.imageUrl }}"
-          class="card-image-bottom w-100"
-          style="width: 120px; height: 190px"
-          alt=""
-        />
+    <div class="" *ngFor="let course of courses">
+      <div class="border-bottom shadow-sm">
+        <div class="row bg-white-subtle mt-3">
+          <div class="col-md-3">
+            <img
+              src="{{ course.imageUrl }}"
+              class="img-fluid w-100 card-img-top"
+              alt="No Image"
+            />
+          </div>
+          <div class="col-md-7">
+            <div class="row p-sm-3">
+              <p class="fw-bold">{{ course.courseTitle }}</p>
+              <p>&nbsp;&nbsp;&nbsp;{{ course.descricption }}</p>
+            </div>
+            <div class="row">
+              <div
+                class="d-flex justify-content-between mb-3 col-sm-10 mx-sm-auto"
+              >
+                <a
+                  ><span class="btn btn-sm btn-dark rounded-0 text-white"
+                    >Price :</span
+                  ><span class="btn btn-secondary rounded-0 btn-sm"
+                    >${{ course.price }}</span
+                  >
+                </a>
+                <a
+                  [routerLink]="['/anonymous/coursedetails']"
+                  class="btn btn-sm btn-info rounded-0"
+                  style="height: 30px"
+                  >Details</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 mt-md-5 col-sm-3 mx-sm-auto mb-sm-2">
+            <div class="text-center mt-md-3">
+              <p class="pe-3">4.5K</p>
+            </div>
+            <div class="d-flex text-warning justify-content-evenly">
+              <i class="bi bi-star"></i>
+              <i class="bi bi-star"></i>
+              <i class="bi bi-star"></i>
+              <i class="bi bi-star"></i>
+              <i class="bi bi-star"></i>
+            </div>
+          </div>
+          <div class="p-3">
+            <div class="d-flex justify-content-between">
+              <a class="btn btn-outline-info" routerLink="/teacher/coursemodule"
+                >Check</a
+              >
 
-        <div class="card-body">
-          <h3 class="card-title text-center">One Stop BootCamp</h3>
-        </div>
-
-        <div class="card-footer p-3">
-          <div class="d-flex justify-content-between">
-            <a class="btn btn-outline-info" routerLink="/teacher/coursemodule"
-              >Check</a
-            >
-
-            <a
-              class="btn btn-outline-info"
-              data-bs-toggle="modal"
-              data-bs-target="#courseModal"
-              >Add Module</a
-            >
+              <a
+                class="btn btn-outline-info"
+                data-bs-toggle="modal"
+                data-bs-target="#courseModal"
+                >Add Module</a
+              >
+            </div>
           </div>
         </div>
       </div>
@@ -112,3 +142,5 @@
     </div>
   </div>
 </div>
+
+<!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum quaerat praesentium tempora quisquam repellat accusamus quo odio, velit recusandae officia! Pariatur earum at alias doloribus tempore. Nemo provident nulla reiciendis est corrupti. Enim tempore reiciendis delectus, suscipit fugit commodi pariatur quidem explicabo placeat? Cum, sequi! -->

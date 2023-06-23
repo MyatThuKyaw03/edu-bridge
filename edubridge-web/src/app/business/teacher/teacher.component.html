@@ -22,7 +22,6 @@
         style="font-size: 18px"
         id="navbarSupportedContent"
       >
-        <a class="nav-link active mx-3" [routerLink]="'/teacher'">Home</a>
         <a [routerLink]="['/teacher/teachercourselist']" class="nav-link"
           >My Courses</a
         >
@@ -71,8 +70,8 @@
     <!-- <button class="btn btn-outline-info" routerLink="/teacher/teachercourselist">Own Courses</button> -->
     <!-- <button class="btn btn-outline-info" routerLink="/teacher/courselist">Other Courses</button> -->
   </div>
-  <hr class="border-bottom border-secondary shadow-sm mt-5">
-  </div>
+  <hr class="border-bottom border-secondary shadow-sm mt-5" />
+</div>
 
 <!-- Modal box Techer crud  -->
 
@@ -117,17 +116,17 @@
               id="title"
             />
           </div>
-          <div class="form-group mt-2" >
+          <div class="form-group mt-2">
             <label for="Course Field">Select Category</label>
             <select
               formControlName="category"
               class="form-control"
               name="Course Field"
               id="course"
-
             >
-              <option *ngFor="let categories of categoryList" id="course" >{{categories.name}}</option>
-
+              <option *ngFor="let categories of categoryList" id="course">
+                {{ categories.name }}
+              </option>
             </select>
           </div>
           <div class="form-group mt-2">

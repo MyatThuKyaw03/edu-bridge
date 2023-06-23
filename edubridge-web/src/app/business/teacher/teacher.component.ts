@@ -8,25 +8,28 @@ import { CourseService } from 'src/app/services/apis/course.service';
   templateUrl: './teacher.component.html',
 })
 export class TeacherComponent implements OnInit {
+  form: FormGroup;
+  categoryList: any = [];
 
-
-  form:FormGroup
-  categoryList: any = []
-
-  constructor(builder: FormBuilder,private courseService : CourseService,private categoryService: CategoryService){
-    this.form=builder.group({
-      id: ['',Validators.required],
-      courseTitle: ['',Validators.required],
-      category: ['',Validators.required],
-      price: ['',Validators.required],
-      descricption: ['',Validators.required],
-      imageUrl: ['',Validators.required]
-    })
-
+  constructor(
+    builder: FormBuilder,
+    private courseService: CourseService,
+    private categoryService: CategoryService
+  ) {
+    this.form = builder.group({
+      id: ['', Validators.required],
+      courseTitle: ['', Validators.required],
+      category: ['', Validators.required],
+      price: ['', Validators.required],
+      descricption: ['', Validators.required],
+      imageUrl: ['', Validators.required],
+    });
   }
 
   ngOnInit(): void {
-    this.categoryService.findAll().subscribe(result => this.categoryList = result)
+    this.categoryService
+      .findAll()
+      .subscribe((result) => (this.categoryList = result));
   }
 
   submit(value: any) {
