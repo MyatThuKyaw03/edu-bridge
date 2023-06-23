@@ -22,27 +22,29 @@
       </div>
     </div>
   </div>
-  <div class="container col-4 shadow">
-    <h4><i class="bi bi-card-list"></i> Category list</h4>
-    <div class="list-group mt-3">
-      <span
-        (click)="searchByCategory(item.id)"
-        class="list-group-item d-flex justify-content-between align-items-center"
-        *ngFor="let item of categories"
-      >
-        <a class="text-decoration-none">{{ item.name }}</a>
-        <span class="badge bg-primary rounded-pill">9</span>
-      </span>
+  <div class="row">
+    <div class="container col-md-3 shadow">
+      <h4><i class="bi bi-card-list"></i> Category list</h4>
+      <div class="list-group mt-3">
+        <span
+          (click)="searchByCategory(item.id)"
+          class="list-group-item d-flex justify-content-between align-items-center"
+          *ngFor="let item of categories"
+        >
+          <a class="text-decoration-none">{{ item.name }}</a>
+          <span class="badge bg-primary rounded-pill">9</span>
+        </span>
+      </div>
     </div>
-  </div>
-  <div class="container col-8 shadow">
-    <div class="row" *ngFor="let item of courseList">
-      <a routerLink="/student/learningpage" style="text-decoration: none">
-        <app-course-item
-          [course]="item"
-          (showDetailsListener)="showDetails($event)"
-        ></app-course-item
-      ></a>
+    <div class="container col-md-9 shadow">
+      <div class="row" *ngFor="let item of courseList">
+        <a routerLink="/student/learningpage" style="text-decoration: none">
+          <app-course-item
+            [course]="item"
+            (showDetailsListener)="showDetails($event)"
+          ></app-course-item
+        ></a>
+      </div>
     </div>
   </div>
 </div>
