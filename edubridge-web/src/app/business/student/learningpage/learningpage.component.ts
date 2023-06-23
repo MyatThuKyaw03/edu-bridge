@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CourseService } from 'src/app/services/apis/course.service';
 
 @Component({
   selector: 'app-learningpage',
@@ -8,9 +9,7 @@ import { Component } from '@angular/core';
 export class LearningpageComponent {
   info!: any;
 
-  constructor(){
-
-  }
+  constructor(private courseService: CourseService) {}
 
   targetChapter = {
     no: 'Chapter 1',
